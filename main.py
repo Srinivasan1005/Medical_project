@@ -23,12 +23,7 @@ def get_db():
 db_dependence= Annotated[Session,Depends(get_db)]
 
         
-@app.get('/')
-def Home():
-    return {
-        "Welcome to home page (FAST_API project)"
-    }
-    
+
 @app.post('/get')
 def forcheck(valid: Location):
     return {
